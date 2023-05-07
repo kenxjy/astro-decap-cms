@@ -11,12 +11,14 @@ export default defineConfig({
 		mdx(),
 		sitemap(),
 		NetlifyCMS({
+			previewStyles: ['/src/styles/global.css'],
 			config: {
 				backend: {
 					name: 'github',
 					branch: 'master',
-					repo: 'kenxjy/astro-decap-cms'
+					repo: 'kenxjy/astro-decap-cms',
 				},
+				publish_mode: 'editorial_workflow',
 				collections: [
 					{
 						name: "blog",
@@ -26,9 +28,11 @@ export default defineConfig({
 						slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
 						fields: [
 							{ label: "Title", name: "title", widget: "string" },
+							{ label: "Description", name: "description", widget: "string" },
 							{ label: "Publish Date", name: "pubDate", widget: "datetime" },
 							{ label: "Updated Date", name: "updatedDate", widget: "datetime" },
 							{ label: "Hero Image", name: "heroImage", widget: "image" },
+							{ label: "Body", name: "body", widget: "markdown" }
 						]
 					}
 				]
