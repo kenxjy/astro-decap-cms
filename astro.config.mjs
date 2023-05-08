@@ -15,6 +15,8 @@ export default defineConfig({
 					name: 'github',
 					branch: 'master',
 					repo: 'kenxjy/astro-decap-cms',
+					base_url: 'https://astro-decap-cms.vercel.app',
+					auth_endpoint: 'api/auth'
 				},
 				publish_mode: 'editorial_workflow',
 				collections: [
