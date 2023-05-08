@@ -48,6 +48,7 @@ export default defineConfig({
                 label: 'Updated Date',
                 name: 'updatedDate',
                 widget: 'datetime',
+								required: false
               },
               {
                 label: 'Hero Image',
@@ -65,6 +66,6 @@ export default defineConfig({
       },
     }),
   ],
-  output: 'server',
+  output: 'static',
   adapter: netlify(),
 });
