@@ -13,7 +13,7 @@ export default defineConfig({
       previewStyles: ['/src/styles/global.css'],
       config: {
         backend: {
-          name: 'github',
+          name: 'git-gateway',
           branch: 'master',
           repo: 'kenxjy/astro-decap-cms',
           // base_url: 'https://astro-decap-cms.vercel.app',
